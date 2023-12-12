@@ -1,8 +1,9 @@
 .carousel-item img {
-  object-fit: cover;
+  object-fit: fill;
   object-position: center;
-  height: 80vh;
+  height: auto;
   overflow: hidden;
+  max-height: 70vh;
 }
 
 .contact-info {
@@ -24,22 +25,17 @@
   text-align: center;
 }
 
-/* Styling for the map */
 #map {
   height: 400px;
   width: 100%;
 }
 
-/* For smaller screens, make the map full width */
 @media (max-width: 768px) {
   #map {
     height: 300px;
   }
 }
 
-
-
-/* Styling for individual bubbles */
 .contact-info li {
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -52,32 +48,23 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-
-
-
-/* MARKETING CONTENT
--------------------------------------------------- */
-
-/* Center align the text within the three columns below the carousel */
 .marketing .col-lg-4 {
   margin-bottom: 1.5rem;
   text-align: center;
 }
 
-/* rtl:begin:ignore */
 .marketing .col-lg-4 p {
   margin-right: .75rem;
   margin-left: .75rem;
 }
 
-/* rtl:end:ignore */
-
-/* About page border */
 .about-row {
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 10px 15px;
   transition: all 0.3s ease-in-out;
+  margin-left: 4%;
+  margin-right: 4%;
 }
 
 .about-row:hover {
@@ -96,5 +83,72 @@
 }
 
 .about-lead {
-  font-size: 28px;
+  font-size: 3vh;
+}
+
+.featurette-heading {
+  font-size: 5vh;
+}
+
+
+/* Carousel */
+
+/* Makes images fully responsive */
+
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ------------------- Carousel Styling ------------------- */
+
+.carousel-inner {
+  border-radius: 15px;
+}
+
+.carousel-caption {
+  background-color: rgba(0,0,0,.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5;
+  z-index: 10;
+  padding: 0 0 10px 25px;
+  color: #fff;
+  text-align: left;
+  margin-bottom: 1vh;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 15;
+  margin: 0;
+  padding: 0 25px 25px 0;
+  text-align: right;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+}
+
+
+/* ------------------- Section Styling - Not needed for carousel styling ------------------- */
+
+.section-white {
+   padding: 10px 0;
+}
+
+.section-white {
+  background-color: #fff;
+  color: #555;
 }
